@@ -8,7 +8,7 @@
 	
 	$title = isset($_POST['title']) ? $_POST['title'] : '';
 	$rules = isset($_POST['rules']) ? $_POST['rules'] : '';
-	$rulesAreHtml = isset($_POST['rules-are-html']) ? true : false;
+	$rulesAreHtml = (isset($_POST['rules-are-html']) && $_POST['rules-are-html'] != '') ? true : false;
 	$cols = isset($_POST['cols']) ? intval($_POST['cols']) : DEFAULT_COLS;
 	$rows = isset($_POST['rows']) ? intval($_POST['rows']) : DEFAULT_ROWS;
 	$tunes = isset($_POST['tunes']) ? explode(',', $_POST['tunes']) : array();
